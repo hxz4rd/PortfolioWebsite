@@ -1,0 +1,67 @@
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+
+#particles-js{
+    background-image: url(./images/640238.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+.home-text{
+    width: 100%;
+    position: absolute;
+    padding: 10px;
+    cursor: pointer;
+}
+#about{
+      background-image: url(./images/about.jpg);
+      background-size: cover;
+      height: 100vh;  
+}
+#skills{
+      background-image: url(./images/skillbgs.jpg);
+      background-size: cover;
+      height: 100vh;  
+}
+#projects{
+      background-image: url(./images/projectsbg.jpg);
+      background-size: cover;
+      height: 100vh; 
+}
+#connect{
+      background-image: url(./images/connectbg.jpg);
+      background-size: cover;
+      height: 100vh; 
+}
+.name-container{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  color: #fff;
+}
+@keyframes anim {
+    0% {
+      color: crimson;
+    }
+    25% {
+      color: #fff;
+    }
+    50% {
+      color: crimson;
+    }
+    75% {
+      color: white;
+    }
+    100% {
+      color: crimson;
+    }
+  }
+  .animate{
+      animation: anim 4s linear infinite;
+  }
