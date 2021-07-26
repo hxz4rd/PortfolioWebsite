@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+  <div id="particles-js">
+    <!--NAVBAR-->
+    <a href="#"><img class="z-40 fixed top-2 left-2 w-8 md:w-10" src="./images/logo.png" alt=""></a>
+    <!-- component -->
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<div class="w-full fixed text-gray-700 z-20 bg-black dark-mode:text-gray-200 dark-mode:bg-gray-800">
+  <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:pr-0">
+    <div class="p-4 flex flex-row items-center justify-between">
+      <a href="#" class="text-lg font-semibold tracking-widest pt-3 text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"></a>
+      <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-white">
+          <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-2 pt-2 pb-4md:pb-0 hidden md:flex md:justify-end md:flex-row">
+      <a href="#particles-js" class="px-4 py-2 mt-2 text-lg text-sm font-semibold text-white rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-red-500 focus:text-gray-900  focus:outline-none focus:shadow-outline" href="#">Home</a>
+      <a href="#about" class="px-4 py-2 mt-2 text-lg text-sm text-white font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-red-500 focus:text-gray-900 focus:outline-none focus:shadow-outline" href="#">About</a>
+      <a href="#skills" class="px-4 py-2 mt-2 text-lg text-sm text-white font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-red-500 focus:text-gray-900 focus:outline-none focus:shadow-outline" href="#">Skills</a>
+      <a href="#projects" class="px-4 py-2 mt-2 text-lg text-sm text-white font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-red-500 focus:text-gray-900 focus:outline-none focus:shadow-outline" href="#">Projects</a>
+      <a href="#connect" class="px-4 py-2 mt-2 text-lg text-sm text-white font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-red-500 focus:text-gray-900 focus:outline-none focus:shadow-outline" href="#">Connect</a>
+      <div @click.away="open = false" class="relative" x-data="{ open: false }">
+        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+          <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #1</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #2</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #3</a>
+          </div>
+        </div>
+      </div>    
+    </nav>
+  </div>
+</div>
+
+
+    
+    <!--HOME-TEXT-->
+    <div  class="home-text flex items-center justify-center flex-col h-screen w-screen z-0">
+        <h1 class="text-white font-bold text-2xl md:text-7xl py-4">Hey There !</h1>
+        <h2 class="text-white font-semibold text-xl py-4 md:text-4xl">Welcome To My Portfolio Website !</h2>
+        <button onclick="alertFunction()" class="py-4 "><a
+                class="animate text-white font-bold text-xl border-2 px-2 pb-1.5 rounded-xl hover:text-red-500 animate md:text-2xl"
+                href="https://docs.google.com/uc?export=download&id=1gTTvrClt86A0NFyQwGmRN67mnDV8xxTf" target="_blank">Download Resume</a></button>
+    </div>
+</div>
+
+
+
+<!--ABOUT-SECTION-->
+<div id="about">
+    
+    <div class="about-wrapper flex justify-center items-center  h-screen">
+       <div class="about-container py-30 w-full flex flex-col md:flex-row px-10">
+
+           <div data-aos="fade-right" data-aos-duration="2000" class="abouttext text-white w-full mx-1 bg-black rounded-xl md:w-3/4 mx-0">
+            <h1 class="text-center text-xl py-2 lg:text-4xl md:text-3xl sm:text-4xl">Hey <span class="text-red-500">There !</span></h1>
+            <p class="text-center text-xs py-2 px-5 lg:text-2xl md:text-xl ">Welcome to my portfolio website, This is <span class="text-red-500 animate">Sahil Malik ,</span>
+              <br> I'm currently completing my graduation in B.TECH CSE from <br> <span class="text-red-500 animate">Noida Institute Of Engineering & Technology</span>
+            </p>
+            <p class="text-center text-xs py-2 px-5 lg:text-2xl md:text-xl ">Really Enthusiast towards Learning & Playing with new tech around me :D</p>
+            <p class="text-center text-xs py-2 px-5 pb-10 lg:text-2xl md:text-xl ">Developing and Designing the Web as a <br><span class="text-red-500 animate">Frontend Developer</span>  is what i love the most</p>
+           </div>
+
+           <div data-aos="flip-up" data-aos-duration="2000" class="aboutimg sm: ">
+              <img class="w-60 py-10 mx-8  md:w-94 mx-0"src="./images/code.png" alt="">
+           </div>
+       </div>
+    </div>
+</div>
+
+
+<!--SKILLS-SECTION-->
+<div id="skills">
+   <div  class="skill-wrapper h-screen flex items-center justify-center">
+       
+       <div class="skill-container">
+         <div class="items grid grid-cols-2 gap-8 md:grid-cols-4 gap-12">
+
+            <a href="https://www.w3schools.com/html/">
+              <div data-aos="fade-up" data-aos-duration="2000" class="item flex items-center flex-col">
+                <h1  class="text-white text-xl">HTML</h1>
+                <img class="w-20 md:w-28"src="./images/htmlicon.png" alt="">
+            </div>
+            </a>
+            
+             <a href="https://www.w3schools.com/css/">
+              <div data-aos="fade-down" data-aos-duration="2000" class="item flex items-center flex-col">
+                <h1  class="text-white text-xl">CSS</h1>
+                <img class="w-20 md:w-24"src="./images/css.png" alt="">
+            </div>
+             </a>
+
+             <a href="https://www.javascript.com/">
+              <div data-aos="fade-up" data-aos-duration="2000" class="item flex items-center flex-col">
+                <h1  class="text-white text-xl">JAVASCRIPT</h1>
+                <img class="w-20 md:w-24"src="./images/jsicon.png" alt="">
+            </div>
+             </a>
+
+             <a href="https://tailwindcss.com/">
+              <div data-aos="fade-down" data-aos-duration="2000" class="item flex items-center flex-col">
+                <h1  class="text-white text-xl">TAILWIND</h1>
+                <img class="w-20 md:w-28"src="./images/tailicon.png" alt="">
+            </div>
+             </a> 
+
+            <a href="https://www.java.com/en/">
+              <div data-aos="fade-down" data-aos-duration="2000" class="item flex items-center flex-col">
+                <h1  class="text-white text-xl">JAVA</h1>
+                <img class="w-32 md:w-40"src="./images/javaicon.png" alt="">
+            </div>
+            </a>
+
+             <a href="https://www.programiz.com/c-programming">
+              <div data-aos="fade-up" data-aos-duration="2000" class="item flex items-center flex-col">
+                <h1  class="text-white text-xl">C</h1>
+                <img class="w-20 md:w-28"src="./images/cicon.png" alt="">
+            </div>
+             </a>
+
+            <a href="https://www.python.org/"> 
+              <div data-aos="fade-down" data-aos-duration="2000" class="item flex items-center flex-col">
+              <h1  class="text-white text-xl">PYTHON</h1>
+              <img class="w-20 md:w-24"src="./images/pyicon.png" alt="">
+          </div></a>
+
+             <a href="https://reactjs.org/" target="_blank">
+                <div data-aos="fade-up" data-aos-duration="2000" class="item flex items-center flex-col">
+                    <h1  class="text-white text-xl">REACT</h1>
+                    <img class="w-28 md:w-36"src="./images/REACTICON.png" alt="">
+                </div>
+             </a>
+
+         </div>
+       </div>
+   </div>
+</div>
+
+
+<div id="projects">
+    
+   <div class="wrapper h-screen flex items-center justify-center">
+    <div class="projet-wrapper w-3/4 grid grid-cols-1 gap-2 md:grid-cols-3">
+        <div data-aos="fade-down" data-aos-duration="2000" class="proj flex flex-col items-center justify-center bg-gray-600 rounded-xl p-3">
+            <h1 class="text-white font-bold text-xl md:py-2">PORTFOLIO SITE</h1>
+            <img class="h-28" src="./images/portfolio.png" alt="">
+            <h1 class="text-white font-bold text-xl md:py-1">TECH USED</h1>
+            <h2 class="text-gray-400">HTML/CSS/JS</h2>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="2000" class="proj flex flex-col items-center justify-center bg-gray-600 rounded-xl p-1">
+            <h1 class="text-white font-bold text-xl py-2">PROJECT 2</h1>
+            <img class="h-28" src="./images/portfolio.png" alt="">
+            <h1 class="text-white font-bold text-xl py-1">TECH USED</h1>
+            <h2 class="text-gray-400">XYZ/ABC</h2>
+        </div>
+        <div data-aos="fade-down" data-aos-duration="2000" class="proj flex flex-col items-center justify-center bg-gray-600 rounded-xl p-3">
+            <h1 class="text-white font-bold text-xl md:py-2">PROJECT 3</h1>
+            <img class="h-28" src="./images/portfolio.png" alt="">
+            <h1 class="text-white font-bold text-xl md:py-1">TECH USED</h1>
+            <h2 class="text-gray-400">XYZ/ABC</h2>
+        </div>
+    </div>
+   </div>
+</div>
+
+<div id="connect">
+<section class="text-gray-600 body-font relative pt-10">
+    <div class="container px-5 py-8 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Connect with me !</h1>
+        
+      </div>
+      <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <div class="flex flex-wrap -m-2">
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="name" class="leading-7 text-sm text-white">Name</label>
+              <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="email" class="leading-7 text-sm text-white">Email</label>
+              <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <div class="relative">
+              <label for="message" class="leading-7 text-sm text-white">Message</label>
+              <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-red-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <button class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg" onclick="sentFunction()">Send !</button>
+          </div>
+          <div class="p-2 w-full pt-8 mt-8 border-t border-white text-center">
+            <a class="text-white">cr7sahilmalik@gmail.com</a>
+            <p class="leading-normal my-5 text-white">Greater Noida,
+              <br class="text-white">INDIA
+            </p>
+            <span class="inline-flex">
+              <a href="https://www.facebook.com/profile.php?id=100004853852787" target="_blank" class="text-white">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a href="https://twitter.com/hxzz4rd" target="_blank" class="ml-4 text-white">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/notsahilll/" target="_blank" class="ml-4 text-white">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-4 text-white">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  function reveal(){
+    document.querySelector('#tgrif').style.display="none";
+}
+function alertFunction() {
+            alert("Redirecting...!");
+        }
+        function sentFunction(){
+          alert("Sent..!");
+        }
+</script>
+<!-- Particle JS-->
+<script src="./js/particles.min.js"></script>
+<script src="./js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+
+</html>
