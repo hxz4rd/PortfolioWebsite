@@ -58,7 +58,7 @@
         <h2 class="text-white font-semibold text-xl py-4 md:text-4xl">Welcome To My Portfolio Website !</h2>
         <button onclick="alertFunction()" class="py-4 "><a
                 class="animate text-white font-bold text-xl border-2 px-2 pb-1.5 rounded-xl hover:text-red-500 animate md:text-2xl"
-                href="#">Download Resume</a></button>
+                href="https://docs.google.com/uc?export=download&id=1gTTvrClt86A0NFyQwGmRN67mnDV8xxTf">Download Resume</a></button>
     </div>
 </div>
 
@@ -209,7 +209,7 @@
             </div>
           </div>
           <div class="p-2 w-full">
-            <button class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Send !</button>
+            <button class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg onclick="sentFunction()">Send !</button>
           </div>
           <div class="p-2 w-full pt-8 mt-8 border-t border-white text-center">
             <a class="text-white">cr7sahilmalik@gmail.com</a>
@@ -252,6 +252,9 @@
 }
 function alertFunction() {
             alert("Redirecting...!");
+        }
+        function sentFunction(){
+          alert("Sent..!");
         }
 </script>
 <!-- Particle JS-->
