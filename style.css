@@ -2,7 +2,9 @@
   display: none;
 }
 
-
+html{
+  scroll-behavior:smooth;
+}
 
 #particles-js{
     background-image: url(./images/640238.jpg);
